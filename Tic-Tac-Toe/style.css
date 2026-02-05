@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, blueviolet, indigo);
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-top: 20px;
+  letter-spacing: 3px;
+}
+
+#turn {
+  margin: 15px;
+  font-size: 1.2rem;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 60vmin;
+  height: 60vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vmin;
+}
+
+.box {
+  background: white;
+  border-radius: 12px;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+.box:disabled {
+  cursor: not-allowed;
+}
+
+.win {
+  background: gold !important;
+  animation: glow 0.8s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 25px orange; }
+}
+
+.restart {
+  margin: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: gold;
+  transition: transform 0.2s;
+}
+
+.restart:hover {
+  transform: scale(1.1);
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.1rem;
+  margin: 10px;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#restart { background: gold; }
+#reset { background: crimson; color: white; }
+
+.win {
+  background: gold !important;
+  box-shadow: 0 0 20px orange;
+}
+
