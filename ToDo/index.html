@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Todo List ✨</h1>
+        <div class="input-section">
+            <input id="todo-input" type="text" placeholder="Add a task..." />
+            <button id="add-button"><i class="bx bx-plus"></i></button>
+        </div>
+    </header>
+
+    <div class="controls">
+        <button id="delete-selected">Delete Completed</button>
+        <button id="delete-all">Delete All</button>
+    </div>
+
+    <ul id="all-todos"></ul>
+
+    <div class="stats">
+        <p>Completed: <span id="c-count">0</span></p>
+        <p>Total: <span id="r-count">0</span></p>
+        <p>Streak: <span id="s-count">0 🔥</span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
